@@ -1,0 +1,13 @@
+const {Router} = require ("express");
+const usersRouter = require("./userRoutes.js");
+const postsRouter = require("./postsRoutes.js");
+const mainRouter = Router();
+
+//Users
+mainRouter.use('/users', usersRouter);
+
+//Posts
+mainRouter.use('/post', postsRouter);
+
+
+module.exports = mainRouter;
